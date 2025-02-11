@@ -678,10 +678,10 @@ export interface Form {
  */
 export interface Lista {
   id: string;
-  title: string;
-  posts?: (string | Post)[] | null;
   relatedPosts?: (string | Post)[] | null;
   greeting?: string | null;
+  title: string;
+  posts?: (string | Post)[] | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1243,10 +1243,10 @@ export interface UsersSelect<T extends boolean = true> {
  * via the `definition` "listas_select".
  */
 export interface ListasSelect<T extends boolean = true> {
-  title?: T;
-  posts?: T;
   relatedPosts?: T;
   greeting?: T;
+  title?: T;
+  posts?: T;
   updatedAt?: T;
   createdAt?: T;
 }

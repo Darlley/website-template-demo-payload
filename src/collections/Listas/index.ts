@@ -16,22 +16,6 @@ export const Listas: CollectionConfig = {
         {
           fields: [
             {
-              name: 'title',
-              type: 'text',
-              required: true,
-            },
-            {
-              name: 'posts',
-              type: 'relationship',
-              relationTo: 'posts',
-              hasMany: true,
-            },
-          ],
-          label: 'Configurações',
-        },
-        {
-          fields: [
-            {
               name: 'relatedPosts',
               type: 'relationship',
               admin: {
@@ -52,6 +36,22 @@ export const Listas: CollectionConfig = {
           ],
           label: 'Painel React Flow',
         },
+        {
+          fields: [
+            {
+              name: 'title',
+              type: 'text',
+              required: true,
+            },
+            {
+              name: 'posts',
+              type: 'relationship',
+              relationTo: 'posts',
+              hasMany: true,
+            },
+          ],
+          label: 'Configurações',
+        }
       ],
     },
   ],
