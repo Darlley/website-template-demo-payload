@@ -1,6 +1,5 @@
 import type { CollectionConfig } from 'payload'
 import { authenticated } from '../../access/authenticated'
-import ReactFlowPanel from '@/components/ReactFlowPanel'
 
 export const Listas: CollectionConfig = {
   slug: 'listas',
@@ -32,6 +31,15 @@ export const Listas: CollectionConfig = {
         },
         {
           fields: [
+            {
+              name: 'relatedPosts',
+              type: 'relationship',
+              admin: {
+                position: 'sidebar',
+              },
+              hasMany: true,
+              relationTo: 'posts',
+            },
             {
               name: 'greeting',
               type: 'text',
